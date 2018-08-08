@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>05计算属性与侦听器</title>
+    <script src = "./vue.js"></script>
+  </head>
+  <body>
+  05计算属性与侦听器05计算属性与侦听器
+    <div id="root">
+      姓: <input v-model="firstName"/>
+      名: <input v-model="lastName"/>
+      <div>{{fullName}}</div>
+      <div>修改的次数:{{count}}</div>
+    </div>
+    <script>
+      new Vue({
+        el: "#root",
+        data: {
+          firstName: "向",
+          lastName: "亚林",
+          count: 0
+        },
+        computed: {
+          fullName: function() {
+            return this.firstName + ' ' + this.lastName
+          }
+        },
+        //{# 定义侦听器,侦听变量发生变化时运行 #}
+        watch: {
+          fullName: function(){
+            return this.count++
+          }
+        }
+      })
+    </script>
+  </body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>demo08作用域传值</title>
+    <script src = "./vue.js"></script>
+  </head>
+  <body>
+    <div id="root">
+
+      <child>
+        <template slot-scope="list">
+          <li>{{list.item}} --item</li>
+        </template>
+      </child>
+
+    </div>
+    <script>
+      //全局子组件定义
+      Vue.component('child', {
+        //子组件的属性必须定义在函数中
+        data: function() {
+          return {
+            list: [1, 2, 3, 4]
+          }
+        },
+        template: `<div>
+                    <ul>
+                      <slot v-for="item of list" :item=item></slot>
+                    </ul>
+                  </div>`
+      })
+      new Vue({
+        el: "#root",
+        data: {
+          msg: "world"
+        }
+      })
+    </script>
+  </body>
+</html>

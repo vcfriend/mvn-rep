@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>挂载点,模板,实例之间的关系</title>
+    <script src = "./vue.js"></script>
+  </head>
+  <body>
+  <!-- 挂载点 -->
+    <div id="demo01">
+    {# <!--模板内容可以写在挂载点内部也可以写在实例内部 template 属性中--> #}
+     {# 11hello {{msg}} #}
+    </div>
+    <script>
+      //vue实例
+      new Vue({
+        el: "#demo01",
+        template: '<h1>22hello {{msg}}</h1>',
+        data: {
+          msg: "world"
+        }
+      })
+    </script>
+  </body>
+</html>

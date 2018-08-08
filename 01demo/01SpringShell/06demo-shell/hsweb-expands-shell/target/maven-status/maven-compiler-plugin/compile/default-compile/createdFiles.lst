@@ -1,0 +1,10 @@
+org/hswebframework/expands/shell/Callback.class
+org/hswebframework/expands/shell/ProcessHelper.class
+org/hswebframework/expands/shell/build/AbstractShellBuilder.class
+org/hswebframework/expands/shell/Result.class
+org/hswebframework/expands/shell/build/LinuxShellBuilder.class
+org/hswebframework/expands/shell/build/AbstractShellBuilder$OsType.class
+org/hswebframework/expands/shell/ShellBuilder.class
+org/hswebframework/expands/shell/Shell$1.class
+org/hswebframework/expands/shell/build/WindowsShellBuilder.class
+org/hswebframework/expands/shell/Shell.class

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>创建第一个vue实例</title>
+    <script src = "./vue.js"></script>
+  </head>
+  <body>
+    <div id="root">
+    <!--
+      //使用动态组件 显示组件
+      <component :is ="type"></component>
+    -->
+
+
+      <child-one v-if ="type === 'child-one'"></child-one>
+      <child-two v-if ='type === "child-two"'></child-two>
+      <button @click ="handleBtnClick">change</button>
+    </div>
+    <script>
+    //定义两个组件
+    Vue.component('child-one',{
+      template: '<div>child-one</div>'
+    })
+    Vue.component('child-two',{
+      template: '<div>child-two</div>'
+    })
+    var vm = new Vue({
+        el: "#root",
+        data: {
+          type: "child-one"
+        },
+        methods: {
+          handleBtnClick: function() {
+            this.type = (this.type === 'child-one' ?
+              'child-two' : 'child-one');
+          }
+        }
+      })
+    </script>
+  </body>
+</html>

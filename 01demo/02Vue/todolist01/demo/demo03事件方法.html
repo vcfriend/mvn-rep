@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>v-on:click事件</title>
+    <script src = "./vue.js"></script>
+  </head>
+  <body>
+    <div >
+    {# v-on:click事件调用的方法定义在vue实例里面的methods属性中 #}
+      <div id="root03" v-on:click ="handleClick" >{{msg}}</div>
+      使用@click简写v-on:click事件调用方式
+      <div id="root04" @click ="handleClick">{{msg}}</div>
+    </div>
+    <script>
+      new Vue({
+        el: "#root03",
+        el: "#root04",
+        data: {
+          msg: "hello"
+        },
+        methods: {
+          handleClick: function (){
+            this.msg = "word"
+          }
+        }
+      })
+    </script>
+  </body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>v-if,v-show 与v-for 指令</title>
+    <script src = "./vue.js"></script>
+  </head>
+  <body>
+    <div id="root">
+      <div v-show ="show">{{msg}}</div>
+      <button @click="handleClick">toggle</button>
+      <ul>
+        <li v-for ="(item, index) of list" :key = index>key:{{index}} {{item}}</li>
+      </ul>
+    </div>
+    <script>
+      new Vue({
+        el: "#root",
+        data: {
+          msg: "hello world",
+          show: true,
+          list: [1, 2, 3]
+        },
+        methods: {
+          handleClick: function(){
+            this.show = !this.show
+          }
+        }
+      })
+    </script>
+  </body>
+</html>

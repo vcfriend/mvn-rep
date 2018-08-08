@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>com.example</groupId>
+  <artifactId>demo07shell</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>jar</packaging>
+
+  <name>demo07shell</name>
+  <description>Demo project for Spring Boot</description>
+
+  <parent>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-parent</artifactId>
+    <version>2.0.3.RELEASE</version>
+    <relativePath/> <!-- lookup parent from repository -->
+  </parent>
+
+
+
+  <properties>
+    <github.global.server>github</github.global.server>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+    <java.version>1.8</java.version>
+    <hsweb.utils.version>3.0.2</hsweb.utils.version>
+    <hsweb.expands.version>3.0.3-SNAPSHOT</hsweb.expands.version>
+  </properties>
+
+  <dependencies>
+    <dependency>
+      <groupId>org.hswebframework</groupId>
+      <artifactId>hsweb-expands-shell</artifactId>
+      <version>${hsweb.expands.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.hswebframework</groupId>
+      <artifactId>hsweb-utils</artifactId>
+      <version>${hsweb.utils.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-webflux</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-test</artifactId>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>io.projectreactor</groupId>
+      <artifactId>reactor-test</artifactId>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.projectlombok</groupId>
+      <artifactId>lombok</artifactId>
+    </dependency>
+  </dependencies>
+
+
+
+  <build>
+    <!-- 指定package生成的 "文件名".jar -->
+    <finalName>demo07shell</finalName>
+    <plugins>
+      <plugin>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-maven-plugin</artifactId>
+      </plugin>
+
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-jar-plugin</artifactId>
+        <version>2.6</version>
+        <configuration>
+          <archive>
+            <manifest>
+              <addClasspath>true</addClasspath>
+              <classpathPrefix>lib/</classpathPrefix>
+              <!--<mainClass>org.hswebframework.expands.shell.Shell</mainClass>-->
+            </manifest>
+          </archive>
+        </configuration>
+      </plugin>
+
+
+      <plugin>
+        <artifactId>maven-deploy-plugin</artifactId>
+        <version>2.8.2</version>
+        <configuration>
+          <altDeploymentRepository>
+            internal.repo::default::file://${project.build.directory}/mvn-repo
+          </altDeploymentRepository>
+        </configuration>
+      </plugin>
+
+      <plugin>
+        <groupId>com.github.github</groupId>
+        <artifactId>site-maven-plugin</artifactId>
+        <version>0.12</version>
+        <configuration>
+          <message>Maven artifacts for vcfriend</message>
+          <noJekyll>true</noJekyll>
+          <outputDirectory>${project.build.directory}/mvn-repo</outputDirectory>
+          <branch>refs/heads/mvn-repo</branch>
+          <includes>
+            <include>**/*</include>
+          </includes>
+          <repositoryName>maven-repo</repositoryName>
+          <!-- 对应github上创建的仓库名称 name -->
+          <repositoryOwner>vcfriend</repositoryOwner>
+          <!-- github 仓库所有者 -->
+        </configuration>
+        <executions>
+          <execution>
+            <goals>
+              <goal>site</goal>
+            </goals>
+            <phase>deploy</phase>
+          </execution>
+        </executions>
+      </plugin>
+
+    </plugins>
+  </build>
+
+  <!--Add repositories "添加自己的仓库地址"-->
+  <repositories>
+    <repository>
+      <id>vcfriend-maven-snapshot-repository</id>
+      <name>vcfriend-maven-snapshot-repository</name>
+      <url>https://raw.github.com/vcfriend/hsweb-expands/snapshot/</url>
+    </repository>
+    <repository>
+      <id>vcfriend-maven-release-repository</id>
+      <name>vcfriend-maven-release-repository</name>
+      <url>https://raw.github.com/vcfriend/hsweb-expands/snapshot/</url>
+    </repository>
+  </repositories>
+  <!-- Add dependencies "添加项目依赖"-->
+
+
+</project>

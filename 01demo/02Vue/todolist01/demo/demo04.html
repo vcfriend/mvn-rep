@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>demo04</title>
+    <script src = "./vue.js"></script>
+  </head>
+  <body>
+  04属性绑定和双向数据绑定,鼠标指针悬停3秒的提示文本
+    <div id="root">
+      <div v-bind:title = "title"> 属性绑定v-bind:title == {{msg}}</div>
+      <div :title ="title"> 简写属性绑定:title == {{msg}}</div>
+      <input :value ="text"/>
+      <div>{{text}}</div>
+      <input v-model ="content"/>
+      <div>{{content}}</div>
+    </div>
+    <script>
+      new Vue({
+        el: "#root",
+        data: {
+          msg: "Hello World",
+          text: "数据单向绑定使用:value",
+          content: "数据双向绑定使用v-model",
+          title: "我是文本提示符"
+        }
+      })
+    </script>
+  </body>
+</html>
