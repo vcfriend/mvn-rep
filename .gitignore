@@ -21,6 +21,7 @@
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
+<<<<<<< HEAD
 
 .*/
 node_modules/
@@ -29,4 +30,9 @@ bin/
 Debug/
 */.DS_Store
 .DS_Store
+=======
+.*
+*/.DS_Store
+node_modules
+>>>>>>> 188db26c51ec734d5052aee12e0772db0a9b0898
 
