@@ -27,7 +27,7 @@ node_modules/
 .idea/
 bin/
 Debug/
-/.DS_Store
+*/.DS_Store
 .DS_Store
 .DS_Store/
 
