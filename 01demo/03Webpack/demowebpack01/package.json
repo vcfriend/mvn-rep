@@ -1,0 +1,15 @@
+{
+  "name": "demowebpack01",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "webpack" // 修改的是这里，JSON文件不支持注释，引用时请清除
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "webpack": "^4.17.1"
+  }
+}
