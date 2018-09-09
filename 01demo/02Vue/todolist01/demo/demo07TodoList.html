@@ -12,11 +12,29 @@
       <button @click ="handleSubmit">提交</button>
       <ul>
         <li v-for ="(item, index) of list" :key ="index">{{item}}</li>
-
       </ul>
-
+      <ul>
+        <todo-item v-for="(item, index) of list"
+        :item ="item"
+        :key ="index"
+        :index ="index"
+        @delete ="handleDelete"
+        />
+      </ul>
     </div>
     <script>
+      // 定义全局组件
+      //子组件使用父组件的传值,需要在props中申明一下
+      Vue.component('todo-item', {
+        props: ['item', 'index'],
+        template: '<li @click ="handleDelete">{{item}} {{index}}</li>',
+        methods: {
+          handleDelete () {
+            // 子组件向父组件通信,向外触发delete事件.并传递参数
+            this.$emit('delete', this.index)
+          }
+        }
+      })
       new Vue({
         el: "#root",
         data: {
@@ -26,6 +44,11 @@
         methods: {
           handleSubmit: function (){
             this.list.push(this.inputValue)
+            this.inputValue = ''
+          },
+          handleDelete: function (index) {
+            console.log(index)
+            this.list.splice(index,1)
           }
         }
       })
