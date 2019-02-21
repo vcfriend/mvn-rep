@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>css部局</title>
+	<!-- <link rel="stylesheet" type="text/css" href="./cssdemo.css"> -->
+	<style type="text/css">
+		
+*{
+	margin: 0px;
+	padding: 0px;
+}
+.divBox{
+	width: 80%;
+	height: 200px;
+	margin: 10px;
+	position: relative;
+	background: yellow;
+}
+.left{
+	/*浮动布局,每一个标签都使用float: left*/
+	float: left;
+	width: 100px;
+	height: 100%;
+	background: red;
+}
+.center{
+	/*第一种用浮动，加上左右外边距，不用绝对定位 
+		这里我推荐把html中的right写在center的前面,如果按顺序写的话会把right挤到下面，感兴趣的可以自己试试
+	*/
+	float: left;
+	margin-left: 150px;
+
+	background: grey;
+	width: 20%;
+	height: 200px;
+}
+.right{
+	float: left;
+	/*margin-left: 150px;*/
+	background: green;
+	height: 100%;
+	width: 200px;
+}
+
+	</style>
+
+</head>
+<body>
+	<h2>float: left; 浮动布局</h2>
+
+	<div class="divBox">
+		<div class="left">left</div>
+		<div class="center">center</div>
+		<div class="right">right</div>
+	</div>
+</body>
+</html>

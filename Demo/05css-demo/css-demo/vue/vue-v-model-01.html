@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>v-model传值</title>
+<!-- 开发环境版本，包含了有帮助的命令行警告 -->
+<!-- <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script> -->
+<script src="./vue.js"></script>
+
+</head>
+<body>
+
+<div id="demo">
+  <currency-input v-model="price"></currentcy-input>
+  <span>{{price}}</span>
+</div>
+ 
+
+<script>
+Vue.component('currency-input', {
+  template: `
+    <div>
+      <span>
+      为什么这里把 'input' 作为触发事件的事件名？input 在哪定义的？<br>
+        <input
+          ref="input"
+          :value="value"
+          @input="$emit('input', $event.target.value)"
+        >
+      </span>
+    </div>
+    
+  `,
+  props: ['value'],// 为什么这里要用 value 属性，value在哪里定义的？貌似没找到啊？
+})
+
+var demo = new Vue({
+  el: '#demo',
+  data: {
+    price: 200,
+  }
+})
+</script>
+
+</body>
+</html>

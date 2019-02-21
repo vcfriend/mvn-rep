@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>vue-示例</title>
+	<!-- 开发环境版本，包含了有帮助的命令行警告 -->
+<!-- <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script> -->
+<script src="./vue.js"></script>
+</head>
+<body>
+
+<div id="app1">
+  app1:
+  {{msg1}}
+  {{msg2}}
+  <p v-bind:title="msg2">
+    鼠标悬停几秒钟查看此处动态绑定的提示信息！
+  </p>
+</div>
+
+<div id="app2">
+	{{msg1}}
+</div>
+
+<script type="text/javascript">
+
+var app = new Vue({
+  el: '#app1',
+  name: 'CompApp1',
+  data: {
+    msg1: 'Hello Vue!',
+    msg2: '页面加载于 ' + new Date().toLocaleString()
+  }
+})
+
+var app2 = new Vue({
+	el: '#app2',
+	name: 'CompApp2',
+	template: `
+		<div>
+			app2:
+			{{msg1}}
+		</div>
+	`,
+	data () {
+		return {
+			msg1: 'abc'
+		}
+	}
+	// props: ['value'],
+})
+</script>
+
+
+
+</body>
+</html>

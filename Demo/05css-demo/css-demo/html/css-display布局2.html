@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title></title>
+        <style type="text/css">
+            *{
+                box-sizing:border-box;
+             }
+
+            .content{
+                display: table;
+                border:1px solid #06c;
+                padding:15px 15px;
+                max-width: 1000px;
+                margin:100px auto;
+                min-width: 120px;
+                width:100%;
+             }
+
+            .box{
+                width:100px;
+                height:100px;
+                border:1px solid #ccc;
+                text-align: center;
+                display: inline-block;
+                font-size: 40px;
+                line-height: 100px;
+            }
+           .right{
+                text-align: right;
+                border: 1px solid #06c;
+                display: table-cell;
+                background-color: #f99
+            }
+            .center {
+                position: relative;
+                border: 1px solid #06c;
+                margin-left: 10px;
+                background-color: #f00;
+
+            }
+           .left{
+                position: relative;
+                border: 1px solid #06c;
+                text-align: left;
+                display: table-cell;
+                background-color: #f88
+            }     
+        </style>
+   </head>
+   <body>
+    <p>https://www.jianshu.com/p/2479665ee1f8</p>
+    <p>元素两端对齐</p>
+第一个案例是让两个元素分别向左和向右对齐，如果是过去，我一定会用float来实现，但其实用table可以这么做：
+       <div class="content">
+            <div class="left">
+                 <div class="box">B</div>
+            </div>
+            <div class="center">
+                <div class="box">cen</div>
+            </div>
+            <div class="right">
+                 <div class="box">A</div>
+            </div>
+       </div>
+  </body>
+  </html>

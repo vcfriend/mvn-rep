@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>flex布局</title>
+	<style type="text/css">
+	.wrapper{
+		display: flex;
+		/*justify-content:center;*/
+		/*容器属性 居中对齐*/
+		justify-content: space-between;
+		/*交叉轴的的终点对齐*/
+		align-items: flex-end;
+	}
+	.left{
+		/*窗口属性*/
+		/*排列顺序数值越小越靠前*/
+		order: -8;
+		width: 50%;
+		height: 200px;
+		background-color: green;
+		/*grow项目属性,使用剩余水平空间,放大元素的宽度 值表示放大的比率,0表示不放大*/
+		flex-grow: 1;
+		/*shrink属性,如果空间不足,则缩小项目 值>=0 值为0时不缩小, 值表示缩小的比率*/
+		flex-shrink: 1;
+		/*flex-basis属性定义了在分配多余空间之前，项目占据的主轴空间（main size）*/
+		flex-basis: 300px;
+	}
+	.middle{
+		order: -5;
+		width: 50%;
+		height: 150px;
+		background: red;
+		margin: 0 20px;
+		flex-grow: 1;
+		flex-shrink: 1;
+		/*align-self属性允许单个项目有与其他项目不一样的对齐方式，可覆盖align-items属性。*/
+		align-self: flex-start;
+	}
+	.right{
+		order: 3;
+		width: 50%;
+		height: 300px;
+		background: yellow;
+		flex-grow: 1;
+		flex-shrink: 0;
+	}
+</style>
+</head>
+<body>
+	flex布局
+	<div class="wrapper">
+		<div class="left">左栏</div>
+		<div class="middle">中间</div>
+		<div class="right">右栏</div>
+	</div>
+
+</body>
+</html>

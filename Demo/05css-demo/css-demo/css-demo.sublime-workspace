@@ -1,0 +1,769 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"max",
+				"max-height\tproperty"
+			],
+			[
+				"margin",
+				"margin-left\tproperty"
+			],
+			[
+				"wo",
+				"word-break\tproperty"
+			],
+			[
+				"min",
+				"min-width\tproperty"
+			],
+			[
+				"le",
+				"left-box"
+			],
+			[
+				"BA",
+				"background-size\tproperty"
+			],
+			[
+				"in",
+				"inline-block\tdisplay"
+			],
+			[
+				"A",
+				"auto\twidth"
+			],
+			[
+				"bak",
+				"background-color\tproperty"
+			],
+			[
+				"mar",
+				"margin-left\tproperty"
+			],
+			[
+				"ma",
+				"margin\tproperty"
+			],
+			[
+				"li",
+				"link\tTag"
+			],
+			[
+				"ba",
+				"background-color\tproperty"
+			],
+			[
+				"st",
+				"style\tTag"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "vue/vue-v-model-01.html",
+			"settings":
+			{
+				"buffer_size": 767,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "vue/vue-index.html",
+			"settings":
+			{
+				"buffer_size": 742,
+				"encoding": "UTF-8",
+				"line_ending": "Unix",
+				"name": "<html>"
+			}
+		},
+		{
+			"file": "vue/vue-transition.html",
+			"settings":
+			{
+				"buffer_size": 1101,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "vue/vue-transition-10.html",
+			"settings":
+			{
+				"buffer_size": 937,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "vue/vue-transition-11.html",
+			"settings":
+			{
+				"buffer_size": 1369,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "element/el-row.html",
+			"settings":
+			{
+				"buffer_size": 1506,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "vue/vue-el-index.html",
+			"settings":
+			{
+				"buffer_size": 2132,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "vue/vue-el-dialog.html",
+			"settings":
+			{
+				"buffer_size": 1353,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "vue/vue-solt-01.html",
+			"settings":
+			{
+				"buffer_size": 1942,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "<!DOCTYPE html>\n<html>\n<head>\n\t<title>solt插槽</title>\n\t<!-- 引入element-ui样式 -->\n<link rel=\"stylesheet\" href=\"https://unpkg.com/element-ui/lib/theme-chalk/index.css\">\n\t<!-- 开发环境版本，包含了有帮助的命令行警告 -->\n<script src=\"https://cdn.jsdelivr.net/npm/vue/dist/vue.js\"></script>\n\t<!-- 引入element-ui组件库 -->\n<script src=\"https://unpkg.com/element-ui/lib/index.js\"></script>\n\n</head>\n<body>\n<div id=\"app\">\n\tslot-scope显示是组件内的变量值 <br>\n  <comp-one ref=\"comp\">\n    <span>xxxx</span>\n  </comp-one>\n  <input type=\"text\" v-model=\"value\"/>\n\n</div>\n</body>\n\n<script type=\"text/javascript\">\n\n\nconst CompOne = {\n\tname: 'CompOne',\n\ttemplate: `\n\t\t<div :style=\"style\">\n\t\t\t作用域插槽<br>\n\t\t\t<solt :value=\"value\" aaa1=\"111\"></solt>\n\t\t</div>\n\t`,\n\tdata () {\n\t\treturn {\n\t\t\tstyle: {\n\t\t\t\twidth: '200px',\n\t\t\t\theight: '150px',\n\t\t\t\tborder: '1px solid red'\n\t\t\t},\n\t\t\tvalue: 'CompOne-value'\n\t\t}\n\t}\n}\n\n\nvar app = new Vue ({\n\tel: '#app',\n\tname: 'soltApp',\n\tcomponents: 'CompOne',\n\n\tdata () {\n\t\treturn '123'\n\t},\n\t mounted () {\n    console.log('new Vue', this.$refs.comp, this.$refs.span)\n  },\n})\n\n</script>\n\n</html>",
+			"file": "vue/vue-solt-02.html",
+			"file_size": 1132,
+			"file_write_time": 131861233693885770,
+			"settings":
+			{
+				"buffer_size": 1060,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "html/flex布局-清晰可见.html",
+			"settings":
+			{
+				"buffer_size": 1038,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "html/css-absolute布局1.html",
+			"settings":
+			{
+				"buffer_size": 352,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "html/css-图片等比缩放.html",
+			"settings":
+			{
+				"buffer_size": 680,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 185.0,
+		"history":
+		[
+			"pwd"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/Users/xiangyalin/java/mvn-rep/01demo/05css-demo/css-demo/html",
+		"/Users/xiangyalin/java/mvn-rep/01demo/05css-demo/css-demo/element",
+		"/Users/xiangyalin/java/mvn-rep/01demo/05css-demo/css-demo/vue"
+	],
+	"file_history":
+	[
+		"/Users/xiangyalin/java/mvn-rep/01demo/05css-demo/css-demo/vue/lib/elment-ui.css",
+		"/Users/xiangyalin/java/mvn-rep/01demo/05css-demo/css-demo/vue/vue-transition.html",
+		"/Users/xiangyalin/java/mvn-rep/01demo/05css-demo/css-demo/vue/vue-transition-css.html",
+		"/Users/xiangyalin/java/mvn-rep/01demo/05css-demo/css-demo/html/css7-8-1切换背景图像.html",
+		"/Users/xiangyalin/java/mvn-rep/01demo/05css-demo/css-demo/element/vue/vue-transition动画.html",
+		"/Users/xiangyalin/java/mvn-rep/01demo/05css-demo/css-demo/element/vue/vue-transition-css动画.html",
+		"/Users/xiangyalin/java/mvn-rep/01demo/05css-demo/css-demo/element/el-row.html",
+		"/Users/xiangyalin/java/mvn-rep/01demo/05css-demo/css-demo/vue/vue.js",
+		"/Users/xiangyalin/java/mvn-rep/01demo/05css-demo/css-demo/html/css7-8-2切换背景图像.html",
+		"/Users/xiangyalin/java/mvn-rep/01demo/05css-demo/css-demo/html/css7-8-0切换背景图像.html",
+		"/Users/xiangyalin/java/mvn-rep/01demo/05css-demo/css-demo/vue/vue-transition动画.html",
+		"/Users/xiangyalin/java/mvn-rep/01demo/05css-demo/css-demo/vue/vue-index.html",
+		"/Users/xiangyalin/java/mvn-rep/01demo/05css-demo/css-demo/element/vue/vue-el-dialog-动画 .html",
+		"/Users/xiangyalin/java/mvn-rep/01demo/05css-demo/css-demo/html/box-sizeing属性.html",
+		"/Users/xiangyalin/java/mvn-rep/01demo/05Css/css-demo/html/flex布局-清晰可见.html",
+		"/Users/xiangyalin/java/mvn-rep/01demo/05Css/css-demo/html/css浮动布局3.html",
+		"/Users/xiangyalin/Library/Application Support/Sublime Text 3/Packages/User/Default (OSX).sublime-keymap",
+		"/Users/xiangyalin/Library/Application Support/Sublime Text 3/Packages/Default/Default (OSX).sublime-keymap",
+		"/Users/xiangyalin/java/mvn-rep/01demo/05Css/css-demo/html/css-absolute布局1.html",
+		"/Users/xiangyalin/java/mvn-rep/01demo/05Css/css-demo/html/css-display布局2.html",
+		"/Users/xiangyalin/java/mvn-rep/01demo/05Css/css-demo/html/cssdemo.css",
+		"/Users/xiangyalin/java/mvn-rep/01demo/05Css/css-demo/html/display-inline-block布局.html",
+		"/Users/xiangyalin/java/mvn-rep/01demo/05Css/css-demo/html/table-cell布局.html",
+		"/Users/xiangyalin/java/mvn-rep/01demo/05Css/css-demo/html/table-cell图片局中.html",
+		"/Users/xiangyalin/java/mvn-rep/01demo/05Css/css-demo/html/table-cell两box实现等高对齐.html"
+	],
+	"find":
+	{
+		"height": 28.0
+	},
+	"find_in_files":
+	{
+		"height": 113.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"CompOne",
+			"<el-row>\n\t\t  <el-button>默认按钮</el-button>\n\t\t  <el-button type=\"primary\">主要按钮</el-button>\n\t\t  <el-button type=\"success\">成功按钮</el-button>\n\t\t  <el-button type=\"info\">信息按钮</el-button>\n\t\t  <el-button type=\"warning\">警告按钮</el-button>\n\t\t  <el-button type=\"danger\">危险按钮</el-button>\n\t\t</el-row>",
+			"\n  ",
+			"value",
+			"{\n",
+			"',\n",
+			"-webkit-animation-name",
+			"target",
+			"15px",
+			"bg",
+			"icon-liulan1"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 12,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "vue/vue-v-model-01.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 767,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								737,
+								737
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 12,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "vue/vue-index.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 742,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								193,
+								161
+							]
+						],
+						"settings":
+						{
+							"auto_name": "<html>",
+							"syntax": "Packages/HTML/HTML.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "vue/vue-transition.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1101,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "vue/vue-transition-10.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 937,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								118,
+								118
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "vue/vue-transition-11.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1369,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								469,
+								469
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "element/el-row.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1506,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								165,
+								165
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 8,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "vue/vue-el-index.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2132,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								516,
+								516
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 9,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "vue/vue-el-dialog.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1353,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								959,
+								959
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 11,
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "vue/vue-solt-01.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1942,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								1942
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 10,
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "vue/vue-solt-02.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1060,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								925,
+								925
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 10,
+					"file": "html/flex布局-清晰可见.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1038,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								546,
+								546
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 11,
+					"file": "html/css-absolute布局1.html",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 352,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 12,
+					"file": "html/css-图片等比缩放.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 680,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								315,
+								317
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 72.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 28.0
+	},
+	"input":
+	{
+		"height": 44.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "css-demo.sublime-project",
+	"replace":
+	{
+		"height": 52.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 392.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 628.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": false,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 221.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>float和BFC配合圣杯布局</title>
+	<style type="text/css">
+	.wrapper{
+		height: 200px;
+		margin: 0;
+		float: left;
+		overflow: hidden;	;
+		border: solid green 2px;
+		background-color: #ccc;
+	}
+
+	.wrapper.left{
+		width: 100px;
+		float: left;
+		background: green;
+		border: solid red 2px;
+		margin-left: 100px;
+	}
+	.wrapper.middle{
+		width: 200px;
+		margin-left: 100px;
+		float: left;
+		border: solid blue 2px;
+	}
+	.wrapper.middle.main{
+		width: 100px;	
+		float: left;
+		margin-left: 10px;
+		border: solid blue 2px;
+		background: red;
+	}
+	.wrapper.right{
+		width: 100px;
+		float: left;
+		background: yellow;
+		margin-left: 100px;
+	}
+</style>
+</head>
+<body>
+	<h2>float和BFC配合圣杯布局</h2>
+	<div class="wrapper">
+		<div class="wrapper left">左栏</div>
+		<div class="wrapper middle">
+			<div class="wrapper middle main">中间</div>
+		</div>
+		<div class="wrapper right">右栏</div>
+	</div>
+</body>
+</html>

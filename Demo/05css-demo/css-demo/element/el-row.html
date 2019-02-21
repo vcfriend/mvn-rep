@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <!-- import CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+
+
+<style>
+  .time {
+    font-size: 13px;
+    color: #999;
+  }
+  
+  .bottom {
+    margin-top: 13px;
+    line-height: 12px;
+  }
+
+  .button {
+    padding: 0;
+    float: right;
+  }
+
+  .image {
+    width: 100%;
+    display: block;
+  }
+
+  .clearfix:before,
+  .clearfix:after {
+      display: table;
+      content: "";
+  }
+  
+  .clearfix:after {
+      clear: both
+  }
+</style>
+
+
+</head>
+<body>
+  <div id="app">
+    <div style="width: 800px; height: 100%; border: blue 1px solid; align-items: center;">
+      <el-row :gutter="10">
+        <el-col :span="5" v-for="(o, index) in 20" :key="o">
+          <el-card :body-style="{ padding: '0px' }">
+            <img src="http://element-cn.eleme.io/static/hamburger.50e4091.png" class="image">
+            <div style="padding: 14px;">
+              <span>好吃的汉堡</span>
+              <div class="bottom clearfix">
+                <el-button type="text" class="button">操作按钮</el-button>
+              </div>
+            </div>
+          </el-card>
+        </el-col>
+      </el-row>
+    </div>
+  </div>
+
+
+</body>
+<!-- import Vue before Element -->
+<script src="https://unpkg.com/vue/dist/vue.js"></script>
+<!-- import JavaScript -->
+<script src="https://unpkg.com/element-ui/lib/index.js"></script>
+
+<script>
+new Vue({
+  el: '#app',
+  data: function() {
+    return { visible: false }
+  }
+})
+</script>
+
+</html>

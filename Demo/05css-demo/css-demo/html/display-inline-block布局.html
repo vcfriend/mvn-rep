@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>display:inline-block布局</title>
+	<style type="text/css">
+				
+*{
+	margin: 0px;
+	padding: 0px;
+}
+.divBox{
+	width: 80%;
+	height: 200px;
+	margin: 10px;
+	position: relative;
+	background: yellow;
+}
+.left{
+	display: inline-block;
+	/*浮动布局,每一个标签都使用float: left*/
+	float: left;
+	width: 100px;
+	height: 100%;
+	background: red;
+}
+.center{
+	display: inline-block;
+	float: left;
+	margin-left: 150px;
+
+	background: grey;
+	width: 20%;
+	height: 200px;
+}
+.right{
+	display: inline-block;
+	float: right;
+	margin-left: 150px;
+	background: green;
+	height: 100%;
+	width: 200px;
+}
+
+	</style>
+</head>
+<body>
+https://www.cnblogs.com/Ry-yuan/p/6848197.html css之display:inline-block布局
+
+<p>使用inline-block布局,float: left可以影响显示的顺序</p>
+	<div class="divBox">
+		<div class="left">left</div>
+		<div class="center">center</div>
+		<div class="right">right</div>
+	</div>
+</body>
+</html>

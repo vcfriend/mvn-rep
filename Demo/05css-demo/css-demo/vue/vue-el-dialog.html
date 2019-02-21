@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>vue-el-dialog动画</title>
+  <!-- 引入element-ui样式 -->
+<link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+  <!-- 开发环境版本，包含了有帮助的命令行警告 -->
+<!-- <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script> -->
+<!-- <script src="https://unpkg.com/vue/dist/vue.js"></script> -->
+<script src="./vue.js"></script>
+<!-- 引入element-ui组件库 -->
+<script src="https://unpkg.com/element-ui/lib/index.js"></script>
+
+<style>
+@keyframes dialog-fade-in {
+  0% {
+    transform: translate3d(0, 100%, 0);
+    opacity: 0;
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
+@keyframes dialog-fade-out {
+  0% {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+  100% {
+    transform: translate3d(0, -100%, 0);
+    opacity: 0;
+  }
+}
+</style>  
+</head>
+<body>
+
+<div id="app">
+  <el-input>xxxxx</el-input>
+  <el-dialog :visible.sync="isShown">
+    <div> 111111 </div>
+  </el-dialog>
+  <el-button type="primary" @click="changeStatus">显示或隐藏</el-button>
+</div>
+
+</body>
+
+
+<script type="text/javascript">
+var app = new Vue () {
+  el: 'app',
+  data () {
+    return {
+      isShown: false
+    }
+  },
+  methods: {
+    changeStatus: function () {
+      if (this.isShown) {
+        this.isShown = false
+      } else {
+        this.isShown = true
+      }
+    }
+  }
+}
+</script>
+
+
+</html>

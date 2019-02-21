@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+  <style type="text/css">
+  * {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  .content{
+   display: table;
+   border:1px solid #06c;
+   padding:15px 15px;
+   max-width: 1000px;
+   margin:10px auto;
+   min-width:320px;
+   width:100%;
+ }
+ .img-box {
+   display: table-cell;
+   vertical-align: middle;
+   background-color: blue;
+ }
+ .left-box{
+  display: table-cell;
+  float:left;
+  border: 1px solid red;
+  margin-right: 10px;
+  padding-top: 5px;
+}
+.right-box{
+ display: table-cell;
+ padding:10px;
+ border:1px solid #ccc;
+ margin-right: 10px;
+ vertical-align: top;
+}
+</style>
+</head>
+<body>
+
+  <div class="content">
+    <div class="left-box">
+      <h2>弹性、响应式布局</h2>
+      <!-- <span>上面的demo中大家只要改变浏览器宽度就会发现他们其实都是会随高度变化自动变化高度的，其实上面内容我大部分没有设置绝对单位</span> -->
+    </div>
+    <div class="img-box">
+      <img style="border:1px solid #06c; height: 100px; width: 200px" src="https://www.baidu.com/img/bd_logo1.png?where=super" alt="" />
+    </div>
+
+    <div class="right-box">
+
+      <span>上面的demo中大家只要改变浏览器宽度就会发现他们其实都是会随高度变化自动变化高度的，其实上面内容我大部分没有设置绝对单位，即使设置了也只设置其中一个box另一个就让他去自适应父元素的剩余留下来的宽度，其实布局的时候设置宽度是一件很痛苦的事情，因为除了大量计算有时候可能在多浏览器下还算不准，可能你在chrome设好的宽度在ie下就坑爹了，要写hack才能解决。最后一个案例，据不靠谱的传言faceboox曾经也这么使用过：</span>
+    </div>
+  </div>   
+</body>
+</html>
+<!-- 
+作者：单纯的土豆
+链接：https://www.jianshu.com/p/2479665ee1f8
+來源：简书
+简书著作权归作者所有，任何形式的转载都请联系作者获得授权并注明出处。 -->

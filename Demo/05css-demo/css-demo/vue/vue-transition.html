@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>vue-transition动画</title>
+<!-- import CSS -->
+<link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+<!-- import Vue before Element -->
+<script src="https://unpkg.com/vue/dist/vue.js"></script>
+<!-- import JavaScript -->
+<script src="https://unpkg.com/element-ui/lib/index.js"></script>
+
+</head>
+<body>
+
+<div id="demo">
+  <button v-on:click="show = !show">
+    Toggle
+  </button>
+  <transition name="fade">
+    <div v-if="show">hello</div>
+  </transition>
+</div>
+<script>
+new Vue({
+  el: '#demo',
+  data: {
+    show: true
+  }
+})
+</script>
+
+<style>
+.fade-enter-active
+, .fade-leave-active 
+{
+  transition:all 2s;
+}
+.fade-enter
+, .fade-leave-to 
+{
+  margin-left: 200px;
+  margin-top: 100px
+}
+.fade-enter-to
+,.fade-leave
+{
+  margin-left: 0px;
+  margin-top: 0px
+
+}
+
+
+#demo div{
+  height: 50px;
+  width: 100px;
+  border: 1px red solid;
+}
+
+/*.fade-enter-active,.fade-leave-active{
+    transition:all 2s;
+}
+.fade-enter,.fade-leave-to{
+    margin-left: 100px;
+}
+.fade-enter-to,.fade-leave{
+    margin-left:0px;
+}*/
+</style>
+
+</body>
+</html>

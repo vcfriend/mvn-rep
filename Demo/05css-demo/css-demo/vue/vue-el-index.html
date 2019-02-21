@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>vue-示例</title>
+	<!-- 引入element-ui样式 -->
+<link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+	<!-- 开发环境版本，包含了有帮助的命令行警告 -->
+<!-- <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script> -->
+<!-- <script src="https://unpkg.com/vue/dist/vue.js"></script> -->
+<script src="./vue.js"></script>
+<!-- 引入element-ui组件库 -->
+<script src="https://unpkg.com/element-ui/lib/index.js"></script>
+
+<style>
+  .el-header, .el-footer {
+    background-color: #B3C0D1;
+    color: #333;
+    text-align: center;
+    line-height: 60px;
+  }
+  
+  .el-aside {
+    background-color: #D3DCE6;
+    color: #333;
+    text-align: center;
+    line-height: 200px;
+  }
+  
+  .el-main {
+    background-color: #E9EEF3;
+    color: #333;
+    text-align: left;
+    line-height: 50px;
+  }
+  
+  body > .el-container {
+    margin-bottom: 40px;
+  }
+  
+  .el-container:nth-child(5) .el-aside,
+  .el-container:nth-child(6) .el-aside {
+    line-height: 260px;
+  }
+  
+  .el-container:nth-child(7) .el-aside {
+    line-height: 320px;
+  }
+</style>
+
+</head>
+<body>
+
+<div id="app-7">
+
+	<el-container>
+  <el-header>Header</el-header>
+  <el-main>Main
+		<el-row>
+		  <el-button>默认按钮</el-button>
+		  <el-button type="primary">主要按钮</el-button>
+		  <el-button type="success">成功按钮</el-button>
+		  <el-button type="info">信息按钮</el-button>
+		  <el-button type="warning">警告按钮</el-button>
+		  <el-button type="danger">危险按钮</el-button>
+		</el-row>
+	  <ol>
+	    <!--
+	      现在我们为每个 todo-item 提供 todo 对象
+	      todo 对象是变量，即其内容可以是动态的。
+	      我们也需要为每个组件提供一个“key”，稍后再
+	      作详细解释。
+	    -->
+	    <todo-item
+	      v-for="item in groceryList"
+	      v-bind:todo="item"
+	      v-bind:key="item.id">
+	    </todo-item>
+	  </ol>
+  </el-main>
+  <el-footer>Footer</el-footer>
+</el-container>
+
+	
+</div>
+
+
+</body>
+
+<script type="text/javascript">
+
+Vue.component('todo-item', {
+  props: ['todo'],
+  template: '<li>{{ todo.text }}</li>'
+})
+
+var app7 = new Vue({
+  el: '#app-7',
+  data: {
+    groceryList: [
+      { id: 0, text: '蔬菜' },
+      { id: 1, text: '奶酪' },
+      { id: 2, text: '随便其它什么人吃的东西' }
+    ]
+  }
+})
+
+</script>
+</html>

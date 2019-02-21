@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Document</title> 
+<!-- import CSS -->
+<link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+<!-- import Vue before Element -->
+<script src="https://unpkg.com/vue/dist/vue.js"></script>
+<!-- import JavaScript -->
+<script src="https://unpkg.com/element-ui/lib/index.js"></script>
+
+<style>
+    /* .v-enter-active,.v-leave-active{
+        transition:all 2s;
+    }
+    .v-enter,.v-leave-to{
+        margin-left: 100px;
+    }
+    .v-enter-to,.v-leave{
+        margin-left:0px;
+    } */
+    .fade-enter-active,.fade-leave-active{
+        transition:all 2s;
+    }
+    .fade-enter,.fade-leave-to{
+        margin-left: 100px;
+    }
+    .fade-enter-to,.fade-leave{
+        margin-left:0px;
+    }
+</style>
+
+<body>
+<!-- 定义一个vue的管理区块，（MVVM中的View） -->
+<!-- 
+     如果要使用动画效果:
+        第一种方式是使用transition标签加css样式结合完成：
+        1.给需要运动的元素加入transition标签
+        2.默认情况下如果控制了transition标签元素的显示和隐藏它会默认
+        给这个元素加入一些class
+            隐藏: 加入类名:
+                    v-leave  
+                    v-leave-active 
+                    v-leave-to
+
+            显示: 加入类名:
+                    v-enter  准备进行运动的状态(起始状态)
+                    v-enter-active  整个运动状态
+                    v-enter-to  整个运动状态(强调运动的结果，结束状态)
+        3.将来如果给transition设置一个name为“show”以后,将来所有的类的名称都需要改变，默认前缀为v-
+          如果加入了name属性，需要将v- 改为show-
+ -->
+<div id="app">
+      <button @click="toggle">显示/隐藏</button><br>
+      <!-- <transition > -->
+      <transition name="fade" >
+            <span class="show" v-show="isshow">it 传说</span>
+      </transition>
+</div>
+
+</body>
+
+<script>
+
+    // 实例化vue对象（MVVM中的View Model）
+    new Vue({
+        // vm控制的区块为id为app的div，此div中的所有vue指令均可以被vm解析
+        el:'#app',
+        data:{
+        // 数据 （MVVM中的Model）
+            isshow:false
+        },
+        methods:{
+            toggle:function(){
+                this.isshow = !this.isshow;
+            }
+        }
+    })
+</script>
+</html>

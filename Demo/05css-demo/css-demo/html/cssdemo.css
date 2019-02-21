@@ -1,0 +1,43 @@
+*{
+	margin: 0px;
+	padding: 0px;
+}
+.divBox{
+	position: relative;
+	width: 80%;
+	height: 200px;
+	margin: 10px;
+	position: relative;
+	background: yellow;
+}
+.left{
+	float: left;
+	width: 100px;
+	height: 100%;
+	background: red;
+}
+.center{
+	/*用浮动加绝对定位*/
+	top: 0;
+	left: 200px;
+	float: left;
+	/*position: absolute;*/
+	margin-left: 10px;
+
+	height: 200px;
+	width: 200px;
+	background: grey;
+}
+.right{
+	/*用浮动加绝对定位*/
+	top: 0;
+	left: 400px;
+	float: left;
+	position: absolute;
+	margin-left: 200px;
+
+	height: 100%;
+	width: 200px;
+	background: green;
+
+}
